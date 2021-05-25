@@ -3,11 +3,28 @@
 /*
 Output:
 
+const pets = [
+    {
+
+        type: 'cat',
+        name: 'coco',
+    },
+    {
+        type: 'frog',
+        name: 'jumper',
+    }
+];
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const names = [];
+    
+    arr.forEach(pet => {
+            names.push(pet.name);
+            
+    });
+        return names;
 }
 
 /*
@@ -17,8 +34,15 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const output = [];
+
+    arr.forEach(pet => {
+    output.unshift(pet.type);
+
+    })
+    return output;
 }
+
 
 /*
 Output:
@@ -32,6 +56,15 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+
+    const translate = [];
+
+    arr.forEach(pet => {
+
+        let spanish = { nombre: pet.name, tipo: pet.type }
+        translate.push(spanish)
+    })
+
+    return translate
 }
 

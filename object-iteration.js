@@ -19,8 +19,19 @@ Output:
 */
 
 export function makeMoreScreamingKeys(someObject) {
-    return {};
-}
+    const scream = {};
+    const keys = Object.keys(someObject);
+    const values= Object.values(someObject);
+    for (let key of keys) {
+    const newKeys = key.toUpperCase();
+
+    console.log(values);
+    console.log(keys);
+    console.log(newKeys);
+
+    return newKeys;
+
+}}
 
 /*
 Output:
